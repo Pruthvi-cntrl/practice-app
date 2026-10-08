@@ -48,6 +48,11 @@
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
+
+  .task-form button,
+  .filter-bar button.is-selected {
+    color: #16171d;
+  }
 }
 
 body {
