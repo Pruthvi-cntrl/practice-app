@@ -124,10 +124,44 @@
 }
 
 .task-item input {
+  appearance: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: -13px;
+  flex-shrink: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.task-item input::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 13px;
   width: 18px;
   height: 18px;
-  flex-shrink: 0;
-  accent-color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--bg);
+  box-sizing: border-box;
+}
+
+.task-item input:checked::before {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.task-item input:checked::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 19px;
+  width: 5px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .task-item label {
@@ -180,6 +214,10 @@
 }
 
 @media (max-width: 640px) {
+  .dashboard {
+    box-sizing: border-box;
+  }
+
   .task-form {
     flex-direction: column;
   }
