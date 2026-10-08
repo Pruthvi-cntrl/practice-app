@@ -60,6 +60,7 @@ function App() {
       createdAt: Date.now(),
     }
     setTasks((current) => [newTask, ...current])
+    setFilter('all')
   }
 
   function handleToggle(id) {
