@@ -9,19 +9,16 @@ const initialTasks = [
     id: crypto.randomUUID(),
     title: 'Review lecture notes for chemistry',
     completed: false,
-    createdAt: Date.now() - 2,
   },
   {
     id: crypto.randomUUID(),
     title: 'Submit history essay draft',
     completed: true,
-    createdAt: Date.now() - 1,
   },
   {
     id: crypto.randomUUID(),
     title: 'Practice coding problems',
     completed: false,
-    createdAt: Date.now(),
   },
 ]
 
@@ -57,7 +54,6 @@ function App() {
       id: crypto.randomUUID(),
       title,
       completed: false,
-      createdAt: Date.now(),
     }
     setTasks((current) => [newTask, ...current])
     setFilter('all')
