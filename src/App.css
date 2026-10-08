@@ -128,7 +128,7 @@
   position: relative;
   width: 44px;
   height: 44px;
-  margin: -13px;
+  margin: -13px -12px -13px -13px;
   flex-shrink: 0;
   background: transparent;
   cursor: pointer;
